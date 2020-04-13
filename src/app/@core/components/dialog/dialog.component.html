@@ -1,0 +1,29 @@
+<div mat-dialog-title>
+  <mat-toolbar *ngIf="options.title" color="primary">
+    <span>{{ options.title }}</span>
+  </mat-toolbar>
+  <ng-content select="[dialog-title]" *ngIf="!options.title"></ng-content>
+</div>
+
+<div mat-dialog-content>
+  <p *ngIf="options.body">{{ options.body }}</p>
+  <ng-content select="[dialog-body]" *ngIf="!options.body"></ng-content>
+</div>
+
+<div mat-dialog-actions>
+  <ng-container *ngIf="options.actions">
+    <button
+      *ngFor="let btn of options.actions; trackBy: trackBtnByIndex"
+      mat-raised-button
+      [mat-dialog-close]="btn.state"
+      [disabled]="disableActions"
+      [color]="btn.color"
+      type="button"
+    >
+      <mat-icon *ngIf="!!btn.icon">{{ btn.icon }}</mat-icon>
+      {{ btn.text }}
+    </button>
+  </ng-container>
+
+  <ng-content select="[dialog-footer]" *ngIf="!options.actions"></ng-content>
+</div>
