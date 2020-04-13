@@ -28,6 +28,9 @@
               "src/assets"
             ],
             "styles": [
+              {
+                "input": "src/rcp-theme.scss"
+              },
               "src/styles.scss"
             ],
             "scripts": []
