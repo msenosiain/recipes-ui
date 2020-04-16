@@ -1,0 +1,20 @@
+<div *ngIf="recipesList?.total">
+  <span class="recipes-total">{{ recipesList.total }}</span> recetas encontradas
+</div>
+<mat-grid-list class="recipes-list" cols="1" rowHeight="132px" gutterSize="8px">
+  <mat-grid-tile
+    *ngFor="let recipe of recipesList?.items"
+    [routerLink]="'recipes/' + recipe.id"
+    class="recipe-tile mat-elevation-z2"
+    fxFlexLayout
+    fxLayoutAlign="center center"
+  >
+    <img class="recipe-image" [src]="imageBaseUrl + recipe.image" alt="recipe.title" />
+    <div class="recipe-info">
+      <div class="mat-headline">{{ recipe.title }}</div>
+      <div class="mat-subheading-1">
+        categorias: <i>{{ recipe.categories.join(', ') }}</i>
+      </div>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>

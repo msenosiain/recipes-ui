@@ -11,11 +11,12 @@ import {
 import { MatDialog } from '@angular/material/dialog';
 
 export abstract class ACanDeactivate {
+  matDialog: MatDialog;
   abstract dialogOptions: IDialogOptions;
 
   abstract canDeactivate(): boolean;
 
-  constructor(private matDialog: MatDialog) {}
+  constructor() {}
 
   confirmDeactivate(): Observable<boolean> {
     const dialogRef = this.matDialog.open(DialogComponent, {

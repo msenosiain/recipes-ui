@@ -1,9 +1,11 @@
 <header>
-    <mat-toolbar color="primary">Angular 6 Bootstrap 4 Example</mat-toolbar>
+  <mat-toolbar color="primary">Angular 6 Bootstrap 4 Example</mat-toolbar>
 </header>
 
-<section class="container">
+<section class="container" fxLayout="row" fxLayoutAlign="center center">
+  <div fxFlex fxFlex.gt-sm="60" fxFill class="content">
     <router-outlet></router-outlet>
+  </div>
 </section>
 
 <footer></footer>

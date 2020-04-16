@@ -1,0 +1,29 @@
+:host {
+  margin-top: 16px;
+  .recipes-total {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--color-primary);
+  }
+  .recipes-list {
+    margin-top: 16px;
+    .recipe-tile {
+      border-radius: 4px;
+      cursor: pointer;
+      > ::ng-deep figure {
+        justify-content: flex-start !important;
+        align-items: flex-start;
+      }
+      .recipe-image {
+        width: 200px;
+        margin-right: 8px;
+      }
+      .recipe-info {
+        padding: 8px;
+        .mat-headline {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
