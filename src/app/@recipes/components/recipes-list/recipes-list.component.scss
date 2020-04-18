@@ -1,6 +1,7 @@
 :host {
   .results-info {
     margin-top: 16px;
+    margin-left: 8px;
     .recipes-total {
       font-size: 32px;
       font-weight: bold;
@@ -8,10 +9,8 @@
     }
   }
   .recipes-list {
-    margin-top: 16px;
     .recipe-tile {
       border-radius: 4px;
-      cursor: pointer;
       > ::ng-deep figure {
         justify-content: flex-start !important;
         align-items: flex-start;
@@ -27,5 +26,12 @@
         }
       }
     }
+  }
+
+  .add-recipe {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 16px;
   }
 }
