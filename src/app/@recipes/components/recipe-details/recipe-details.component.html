@@ -1,6 +1,6 @@
 <div fxLayout="column" fxLayoutAlign="center" fxFill>
   <div>
-    <mat-icon color="primary" routerLink="/recipes">navigate_before</mat-icon>
+    <a routerLink="/recipes"><mat-icon color="primary">navigate_before</mat-icon></a>
   </div>
   <mat-card fxFlex fxFlex.gt-sm="60" fxFill>
     <img mat-card-image [src]="imagesApiUrl + recipe.image" [alt]="recipe.title" />
