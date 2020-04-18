@@ -1,1 +1,21 @@
-<p>recipe-details works!</p>
+<div fxLayout="column" fxLayoutAlign="center" fxFill>
+  <div>
+    <mat-icon color="primary" routerLink="/recipes">navigate_before</mat-icon>
+  </div>
+  <mat-card fxFlex fxFlex.gt-sm="60" fxFill>
+    <img mat-card-image [src]="imagesApiUrl + recipe.image" [alt]="recipe.title" />
+    <mat-card-title>{{ recipe.title }}</mat-card-title>
+    <h4>Ingredientes</h4>
+    <ul>
+      <li *ngFor="let item of recipe.ingredients">
+        <span>{{ item.quantity }} </span>
+        <span *ngIf="item.unit">{{ item.unit }} de </span>
+        <span>{{ item.name }}</span>
+      </li>
+    </ul>
+    <h4>Preparación</h4>
+    <div class="procedure">
+      {{ recipe.procedure }}
+    </div>
+  </mat-card>
+</div>

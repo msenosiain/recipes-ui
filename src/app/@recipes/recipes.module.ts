@@ -7,6 +7,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 
 import { recipesRoutes } from './recipes.routes';
 
@@ -16,7 +17,7 @@ import { RecipeCreateComponent } from './components/recipe-create/recipe-create.
 import { RecipeEditComponent } from './components/recipe-edit/recipe-edit.component';
 import { RecipeResolver } from './shared/recipe.resolver';
 
-const AngularMaterialModules = [MatGridListModule, MatListModule, MatCardModule];
+const AngularMaterialModules = [MatGridListModule, MatListModule, MatCardModule, MatIconModule];
 
 @NgModule({
   declarations: [RecipesListComponent, RecipeCreateComponent, RecipeDetailsComponent, RecipeEditComponent],

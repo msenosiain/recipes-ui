@@ -1,0 +1,22 @@
+:host {
+  mat-icon {
+    cursor: pointer;
+  }
+  mat-card {
+    mat-card-title,
+    h4 {
+      color: var(--color-primary);
+    }
+    h4 {
+      margin-bottom: 0;
+    }
+    ul {
+      margin-top: 0;
+      padding-left: 0;
+      list-style: none;
+    }
+    .procedure {
+      white-space: pre-line;
+    }
+  }
+}

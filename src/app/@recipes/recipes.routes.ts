@@ -17,27 +17,24 @@ export const recipesRoutes: Routes = [
       },
       {
         path: 'add',
-        component: RecipeCreateComponent,
-        canDeactivate: [PendingChangesGuard]
+        component: RecipeCreateComponent
+        // canDeactivate: [PendingChangesGuard]
       },
       {
         path: ':id',
+        resolve: {
+          recipe: RecipeResolver
+        },
         children: [
           {
             path: '',
             pathMatch: 'full',
-            component: RecipeDetailsComponent,
-            resolve: {
-              recipe: RecipeResolver
-            }
+            component: RecipeDetailsComponent
           },
           {
             path: 'edit',
-            component: RecipeEditComponent,
-            canDeactivate: [PendingChangesGuard],
-            resolve: {
-              recipe: RecipeResolver
-            }
+            component: RecipeEditComponent
+            // canDeactivate: [PendingChangesGuard]
           }
         ]
       }
